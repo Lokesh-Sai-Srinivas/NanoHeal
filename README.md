@@ -1,78 +1,54 @@
-# NanoHeal
+# NanoHeal — AI-Powered Medical Assistant
 
-NanoHeal is an AI-powered health assistant application designed to provide empathetic and cautious health information. It features a chat interface powered by Google's Gemini AI, a dashboard for health authorities, and user authentication via Firebase.
+NanoHeal is an empathetic AI healthcare companion designed to provide real-time symptom analysis and medical guidance. Originally developed for the **Smart India Hackathon (SIH) 2025**, it focuses on making healthcare more accessible to underserved rural communities through a localized, scalable approach.
 
-## Project Structure
+## 🚀 Features
 
-- **`/client`**: The frontend application built with React and Vite.
-- **`/server`**: The backend API built with Express and Node.js.
+- **AI Chatbot**: Real-time conversational agent powered by **Gemini 2.5 Flash** for empathetic symptom guidance.
+- **User Dashboard**: Personalized health tracking and history for individual patients.
+- **Authority Dashboard**: A specialized interface for healthcare providers to monitor local health patterns and manage reports.
+- **Doctor Recommendations**: Smart suggestions for verified local doctors based on specialization and symptoms.
+- **Secure Authentication**: Robust user management and data security powered by **Firebase**.
 
-## Key Features
+## 🛠️ Tech Stack
 
-- **AI Chat Assistant**: Uses Google Gemini AI to analyze symptoms and provide general health advice.
-- **Authority Dashboard**: Allows health authorities to manage health reports and track case counts.
-- **User Authentication**: Secure login and signup powered by Firebase.
-- **Doctor Directory**: Connects users with verified local healthcare professionals.
+- **Frontend**: React (Vite), Tailwind CSS, Lucide Icons
+- **Backend**: Node.js (Express)
+- **AI Engine**: Google Gemini 2.5 Flash
+- **Database & Auth**: Firebase / Google Cloud Firestore
 
-## Tech Stack
+## 📂 Project Structure
 
-- **Frontend**: React, Vite, CSS.
-- **Backend**: Node.js, Express.
-- **AI**: Google Generative AI (Gemini).
-- **Database & Auth**: Firebase Firestore and Firebase Authentication.
+- `/client`: React frontend application.
+- `/server`: Node.js Express backend and AI integration.
 
-## Getting Started
+## 🚦 Getting Started
 
 ### Prerequisites
 
-- Node.js installed on your machine.
-- Firebase project and service account.
-- Google Gemini API key.
+- Node.js (v18+)
+- Firebase Account
+- Google AI (Gemini) API Key
 
-### Installation
+### Setup
 
-1. Clone the repository:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/Lokesh-Sai-Srinivas/NanoHeal.git
+   cd NanoHeal
    ```
 
-2. Install dependencies for the client:
-   ```bash
-   cd client
-   npm install
-   ```
+2. **Backend Setup**:
+   - Navigate to `/server`
+   - Run `npm install`
+   - Create a `.env` file with `GEMINI_API_KEY` and `FIREBASE_SERVICE_ACCOUNT_JSON`.
+   - Start with `node server.js`
 
-3. Install dependencies for the server:
-   ```bash
-   cd ../server
-   npm install
-   ```
+3. **Frontend Setup**:
+   - Navigate to `/client`
+   - Run `npm install`
+   - Start with `npm run dev`
 
-### Configuration
+## ⚠️ Disclaimer
 
-Create a `.env` file in the `server` directory with the following variables:
-
-```env
-PORT=3001
-GEMINI_API_KEY=your_gemini_api_key
-FIREBASE_SERVICE_ACCOUNT_JSON={"type": "service_account", ...}
-```
-
-Update the Firebase configuration in `client/src/App.jsx` with your web app's credentials.
-
-### Running the App
-
-1. Start the backend server:
-   ```bash
-   cd server
-   node server.js
-   ```
-
-2. Start the frontend client:
-   ```bash
-   cd client
-   npm run dev
-   ```
-
----
-⚠️ **Disclaimer**: This application is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare professional for medical concerns.
+NanoHeal is an AI-driven informational tool. It is **not** a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for any medical concerns.
